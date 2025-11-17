@@ -7,7 +7,6 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 import joblib
 
-# use absolute import so running as script works
 from ml.config import config
 
 def train():
@@ -45,7 +44,6 @@ def train():
     print(f"Model saved to {config.model_path}")
     print(f"Metrics: {metrics}")
 
-    # simple "gate"
     if acc < 0.9:
         raise ValueError(f"Accuracy too low: {acc:.3f}")
 
