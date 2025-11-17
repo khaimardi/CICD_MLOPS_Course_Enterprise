@@ -32,7 +32,7 @@ jobs:
 
       - name: Train model (sanity check)
         run: |
-          python ml/train.py
+          python -m ml.train
 
       - name: Run tests
         run: |
