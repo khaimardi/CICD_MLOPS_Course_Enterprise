@@ -7,18 +7,19 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 import joblib
 
-from .config import config
+from ml.config import config
 
 def train():
     config.model_dir.mkdir(parents=True, exist_ok=True)
+
     data = load_iris()
     X_train, X_test, y_train, y_test = train_test_split(
-    data.data,
-    data.target,
-    test_size=config.test_size,
-    random_state=config.random_state,
-    stratify=data.target,
-)
+        data.data,
+        data.target,
+        test_size=config.test_size,
+        random_state=config.random_state,
+        stratify=data.target,
+    )
 
     clf = RandomForestClassifier(
         n_estimators=config.n_estimators,
