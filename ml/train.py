@@ -7,6 +7,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 import joblib
 
+# use absolute import so running as script works
 from ml.config import config
 
 def train():
