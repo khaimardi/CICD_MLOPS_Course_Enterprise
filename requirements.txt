@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+scikit-learn
+pydantic
+joblib
+pytest
+httpx
+google-cloud-storage
+python-dotenv
