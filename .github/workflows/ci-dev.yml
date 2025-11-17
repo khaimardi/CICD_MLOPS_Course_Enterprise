@@ -30,7 +30,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Debug ml/train.py (CI)         # sementara: tunjukkan isi file di runner
+      - name: Debug ml/train.py (CI)   # temporary: shows exact file used by runner
         run: |
           echo "=== ml/train.py (runner sees) ==="
           sed -n '1,240p' ml/train.py || true
